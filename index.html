@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>打字效果-基于animate.css开发</title>
+		<link rel="stylesheet" type="text/css" href="style/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="style/themes.css"/>
+	</head>
+
+	<body>
+		<div class="wz">
+			<div id="title">引子 穿越的唐家三少</div>
+			<div class="wenzi">巴蜀，历来有天府之国的美誉，其中，最有名的门派莫过于唐门。</div>
+			<div class="wenzi">唐门所在是一个神秘的地方，许多人只知道，那是一个半山腰，而唐门所在这座山的山顶有一个令人胆颤心惊的名字，——鬼见愁。 </div>
+			<div class="wenzi">从鬼见愁悬崖上扔出一块石头，要足足数上十九下才会听到石落山底的回声，可见其高，也正是因为这十九秒，尚超过十八层地狱一筹，故而得名。 </div>
+		</div>
+		
+	
+		<script src="script/fontAnimate.js"></script>
+		<script type="text/javascript">
+			fontAnimate.init({
+				el:"#title",
+				fontDelay: 100, // 文字之间执行延迟
+				className:"bounceIn"
+			});
+			
+			fontAnimate.init({
+				el: document.querySelectorAll(".wenzi"),
+				fragment: true, // 是否分段执行， 否就是所有段落一起执行  默认为true
+				delay: 1000, // 当前段落执行延迟
+				fontDelay: 100, // 文字之间执行延迟
+				className: "flipInX"
+			});
+		</script>
+	</body>
+
+</html>
